@@ -81,18 +81,37 @@ public class payload {
 	}
 	
 	
-	public static  String librarypostapi()
+	public static  String librarypostapi(String aisle, String isbn)
 	
 	{
 		
 		String postpayload ="{\r\n"
 				+ "\r\n"
 				+ "\"name\":\"Learn Appium Automation with Java\",\r\n"
-				+ "\"isbn\":\"bcd876\",\r\n"
-				+ "\"aisle\":\"22887\",\r\n"
+				+ "\"isbn\":\""+aisle+"\",\r\n"
+				+ "\"aisle\":\""+isbn+"\",\r\n"
 				+ "\"author\":\"John foe\"\r\n"
 				+ "}\r\n"
 				+ "";
 		return postpayload;
+	}
+	
+	public static String JiraPostReq()
+	
+	{
+		
+		return "{\r\n"
+				+ "    \"fields\": {\r\n"
+				+ "       \"project\":\r\n"
+				+ "       {\r\n"
+				+ "          \"key\": \"SCRUM\"\r\n"
+				+ "       },\r\n"
+				+ "       \"summary\": \"URL not working\",\r\n"
+				+ "       \"description\": \"Website main url is not working \",\r\n"
+				+ "       \"issuetype\": {\r\n"
+				+ "          \"name\": \"Bug\"\r\n"
+				+ "       }\r\n"
+				+ "   }\r\n"
+				+ "}";
 	}
 }
